@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -67,6 +68,14 @@ public class TimeButton extends Button implements View.OnClickListener {
         this.setEnabled(false);
         this.setTextColor(getResources().getColor(R.color.color_AFAFAF));
         t.schedule(tt, 0, 1000);
+    }
+
+    @Override
+    public void setOnClickListener(@Nullable OnClickListener l) {
+        if (l instanceof TimeButton) {
+            super.setOnClickListener(l);
+        } else
+            this.mOnclickListener = l;
     }
 
     private void initTimer() {
