@@ -21,7 +21,7 @@ import java.util.TimerTask;
  * 自定义的倒计时view
  */
 
-public class TimeButton extends Button implements View.OnClickListener{
+public class TimeButton extends Button implements View.OnClickListener {
     private long lenght = 60 * 1000;// 倒计时长度,默认60秒
     private String textafter = "秒后可重发";
     private String textbefore = "获取验证码";
@@ -41,8 +41,9 @@ public class TimeButton extends Button implements View.OnClickListener{
     public TimeButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         setOnClickListener(this);
-        this.mContext=context;
+        this.mContext = context;
     }
+
     @SuppressLint("HandlerLeak")
     Handler han = new Handler() {
         public void handleMessage(android.os.Message msg) {
@@ -67,6 +68,7 @@ public class TimeButton extends Button implements View.OnClickListener{
         this.setTextColor(getResources().getColor(R.color.color_AFAFAF));
         t.schedule(tt, 0, 1000);
     }
+
     private void initTimer() {
         time = lenght;
         t = new Timer();
@@ -92,6 +94,7 @@ public class TimeButton extends Button implements View.OnClickListener{
         t = null;
         Log.i("倒计时结束", "执行clearTimer");
     }
+
     /**
      * 和activity的onDestroy()方法同步
      */

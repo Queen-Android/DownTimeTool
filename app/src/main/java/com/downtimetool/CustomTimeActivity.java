@@ -7,11 +7,12 @@ import com.downtimetool.view.TimeButton;
 
 public class CustomTimeActivity extends AppCompatActivity {
     private TimeButton button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_time);
-        button= (TimeButton) findViewById(R.id.send_code);
+        button = (TimeButton) findViewById(R.id.send_code);
         button.onCreate(savedInstanceState);
     }
 
