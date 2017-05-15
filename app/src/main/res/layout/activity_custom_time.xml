@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.downtimetool.CustomTimeActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/tv_agent_captchas"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:ems="5"
+            android:text="验  证  码: "
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/et_agent_captchas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/v_1_agent"
+            android:layout_toRightOf="@+id/tv_agent_captchas"
+            android:background="#FFFFFF"
+            android:hint="请输入短信验证码"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColorHint="@color/color_AFAFAF"
+            android:textSize="12dp" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@+id/send_code"
+            android:background="#ebebeb" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_code_agent"-->
+        <!--android:layout_width="@dimen/dp80"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/text_get_captchas"-->
+        <!--android:textColor="@color/color_fc4750"-->
+        <!--android:textSize="12dp" />-->
+
+        <com.downtimetool.view.TimeButton
+            android:id="@+id/send_code"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:gravity="center"
+            android:lines="1"
+            android:text="发送验证码"
+            android:textColor="#FC4750"
+            android:textSize="12dp"/>
+
+        <View
+            android:id="@+id/v_1_agent"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="14dp"
+            android:background="#ebebeb" />
+    </RelativeLayout>
+
+</LinearLayout>
